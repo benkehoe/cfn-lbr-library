@@ -1,0 +1,8 @@
+Resources:
+  S3Object:
+    CodeUri: ./S3Object
+    Enable: True
+
+  SSMParameterInput:
+    CodeUri: ./SSMParameterInput
+    Enable: True

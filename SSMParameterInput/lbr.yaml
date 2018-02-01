@@ -1,0 +1,14 @@
+Types:
+- Custom::SSMParameterInput
+Properties:
+  Runtime: python3.6
+  Policies:
+  - Version: '2012-10-17'
+    Effect: Allow
+    Action:
+    - ssm:GetParameter
+
+Versions:
+  v1:
+    Properties:
+      Handler: SSMParameterInput.handler

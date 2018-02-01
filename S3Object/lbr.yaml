@@ -1,0 +1,15 @@
+Types:
+- Custom::S3Object
+Properties:
+  Runtime: python3.6
+  Policies:
+  - Version: '2012-10-17'
+    Effect: Allow
+    Action:
+    - s3:PutObject
+    - s3:DeleteObject
+
+Versions:
+  v1:
+    Properties:
+      Handler: S3Object.handler
