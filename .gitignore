@@ -61,6 +61,7 @@ target/
 .idea
 
 cfn_custom_resource
+cfn_custom_resource.py
 lbr-registry-packaged-template.yaml
 lbr-registry-template.yaml
 

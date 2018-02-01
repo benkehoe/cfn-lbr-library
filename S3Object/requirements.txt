@@ -1,1 +1,0 @@
--e git://github.com/iRobotCorporation/cfn-custom-resource.git@master#egg=cfn-custom-resource
