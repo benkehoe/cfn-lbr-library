@@ -1,0 +1,9 @@
+Types:
+- Custom::Calculation
+Properties:
+  Runtime: python3.6
+
+Versions:
+  v1:
+    Properties:
+      Handler: Calculation.handler

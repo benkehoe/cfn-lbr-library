@@ -7,7 +7,7 @@ build:
 	    pip install -U -r $$d/requirements.txt -t $$d; \
 	  fi; \
 	  if [ -e $$d/requires-cfn-custom-resource ] && [ -n $$d/cfn_custom_resource.py ]; then \
-	    (cd $$d && wget https://github.com/iRobotCorporation/cfn-custom-resource/blob/master/cfn_custom_resource/cfn_custom_resource.py) \
+	    (cd $$d && wget https://raw.githubusercontent.com/iRobotCorporation/cfn-custom-resource/master/cfn_custom_resource/cfn_custom_resource.py) \
 	  fi; \
 	done
 
