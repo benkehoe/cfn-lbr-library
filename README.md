@@ -2,7 +2,7 @@
 ## CloudFormation custom resources
 
 ## Quickstart
-Install cfn-lbr-registry, the tool that packages and deploys this: https://github.com/benkehoe/cfn-lbr-registry
+Clone and install `cfn-lbr-registry`, the tool used to package and deploy the registry: https://github.com/benkehoe/cfn-lbr-registry
 
 Then run:
 ```
