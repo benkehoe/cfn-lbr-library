@@ -4,10 +4,12 @@ Properties:
   Runtime: python3.6
   Policies:
   - Version: '2012-10-17'
-    Effect: Allow
-    Action:
-    - s3:PutObject
-    - s3:DeleteObject
+    Statement:
+    - Effect: Allow
+      Action:
+      - s3:PutObject
+      - s3:DeleteObject
+      Resource: "*"
 
 Versions:
   v1:

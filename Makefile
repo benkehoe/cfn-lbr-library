@@ -14,6 +14,7 @@
 
 .DEFAULT_GOAL := all
 
+CFN_CUSTOM_RESOUCE_FILE_URL = https://raw.githubusercontent.com/iRobotCorporation/cfn-custom-resource/master/cfn_custom_resource/cfn_custom_resource.py
 CFN_CUSTOM_RESOUCE_CACHE_FILE = .cfn_custom_resource
 
 .PHONY: build
@@ -23,10 +24,10 @@ build:
 	    pip install -U -r $$d/requirements.txt -t $$d; \
 	  fi; \
 	  if [ -e $$d/requires-cfn-custom-resource ]; then \
-	    if [ -n .cfn_custom_resource.py ]; then \
-	      wget -O $(CFN_CUSTOM_RESOUCE_CACHE_FILE) https://raw.githubusercontent.com/iRobotCorporation/cfn-custom-resource/master/cfn_custom_resource/cfn_custom_resource.py \
+	    if ! [ -e $(CFN_CUSTOM_RESOUCE_CACHE_FILE) ]; then \
+	      wget -O $(CFN_CUSTOM_RESOUCE_CACHE_FILE) $(CFN_CUSTOM_RESOUCE_FILE_URL); \
 	    fi; \
-	    cp $(CFN_CUSTOM_RESOUCE_CACHE_FILE) $$d/cfn_custom_resource.py \
+	    cp $(CFN_CUSTOM_RESOUCE_CACHE_FILE) $$d/cfn_custom_resource.py; \
 	  fi; \
 	done
 

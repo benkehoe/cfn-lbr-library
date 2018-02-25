@@ -60,6 +60,6 @@ target/
 .*project
 .idea
 
-cfn_custom_resource
+.cfn_custom_resource
 cfn_custom_resource.py
-lbr-registry-artifact*
+.lbr*
